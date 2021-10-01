@@ -11,8 +11,7 @@ pipeline {
       
       steps {
           
-            sh "while read line; do   echo "${line}"; done < repo_list.txt"
-        
+            sh 'while read line; do   echo "${line}"; done < repo_list.txt'
     }
 
         }
