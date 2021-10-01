@@ -11,16 +11,9 @@ pipeline {
       
       steps {
             echo "This is sample"
-             File file = new File("repo_list.txt")
-
-            if( !file.exists() ) {
-            println "File does not exist"
-            } else {
-
-                file.splitEachLine("\n"){string->
-                string.each{r ->
-                r = r.split(' ')
-                println r}
+             def file = readFile location
+             def lines = file.readLines()
+             echo "${lines}"
         }
     }
 
