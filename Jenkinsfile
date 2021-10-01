@@ -11,7 +11,7 @@ pipeline {
       
       steps {
           
-            sh 'while read line; do bash test.sh $line; done > repo_list.txt'
+            sh 'for i in $(cat repo_list.txt); do     bash test.sh "$i"; done'
     }
 
         }
