@@ -12,5 +12,6 @@ pipeline {
       steps {
             echo "This is sample"
         }
-      }    
+      }   
+  } 
 }
