@@ -11,7 +11,8 @@ pipeline {
       
       steps {
           
-            sh 'while read line; do   curl -H "Authorization: token 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" --data '{"name":"$line"}' https://api.github.com/user/repos; done < repo_list.txt'
+            sh 'while read line; do  export base_url=$(echo "{\"name\":\"$line\"}") \
+            curl -H "Authorization: token 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" --data "$baseurl" https://api.github.com/user/repos; done < repo_list.txt'
     }
 
         }
@@ -19,4 +20,4 @@ pipeline {
   
 }
 
-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
+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
