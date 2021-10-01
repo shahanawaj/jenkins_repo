@@ -14,7 +14,7 @@ pipeline {
     stage('create') {
       
       steps {
-          
+            
             sh 'for i in $(cat repo_list.txt); do     bash test.sh "$i" "$token"; done'
     }
 
