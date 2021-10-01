@@ -10,6 +10,7 @@ pipeline {
     stage('create') {
       
       steps {
+          script {
             echo "This is sample"
              def file = readFile location
              def lines = file.readLines()
@@ -18,6 +19,6 @@ pipeline {
     }
 
         }
-    
+  }  
   
 }
