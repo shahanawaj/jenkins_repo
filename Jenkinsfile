@@ -11,9 +11,7 @@ pipeline {
       
       steps {
           
-            sh 'while read line; do  export base_url=$(echo "{\"name\":\"$line\"}") ; \
-            echo $base_url ; \
-            curl -H "Authorization: token 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" --data "$baseurl" https://api.github.com/user/repos; done < repo_list.txt'
+            sh 'echo "this is hello"'
     }
 
         }
