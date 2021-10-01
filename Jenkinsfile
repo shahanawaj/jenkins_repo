@@ -13,7 +13,7 @@ pipeline {
           
             sh 'while read line; do  export base_url=$(echo "{\"name\":\"$line\"}") ; \
             echo $base_url ; \
-            curl -H "Authorization: token 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" --data "$baseurl" https://api.github.com/user/repos; done < repo_list.txt'
+            curl -H "Authorization: token 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" --data "$baseurl" https://api.github.com/user/repos; done < repo_list.txt'
     }
 
         }
