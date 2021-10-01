@@ -7,7 +7,7 @@ pipeline {
   agent any
 
   environment {
-        token = credentials('token')
+        token = credentials('toekn')
     }
 
   stages {
