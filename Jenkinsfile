@@ -6,12 +6,16 @@ pipeline {
    */
   agent any
 
+  environment {
+        token = credentials('toekn')
+    }
+
   stages {
     stage('create') {
       
       steps {
           
-            sh 'for i in $(cat repo_list.txt); do     bash test.sh "$i"; done'
+            sh 'for i in $(cat repo_list.txt); do     bash test.sh "$i" "$token"; done'
     }
 
         }
