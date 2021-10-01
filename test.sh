@@ -1,7 +1,4 @@
 #!/bin/bash
  
-mkdir $0
-cd $0
-git init
-git remote ass origin git@github.com:shahanawaj/${0}.git
-git push origin master
+
+curl -i -u shahanawaj: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 --data '{"name":"${0}"}' https://api.github.com/user/repos

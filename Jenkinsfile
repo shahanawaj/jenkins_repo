@@ -11,7 +11,7 @@ pipeline {
       
       steps {
           
-            sh 'echo "this is hello"'
+            sh 'while read line; do bash test.sh $line; done > repo_list.txt'
     }
 
         }
