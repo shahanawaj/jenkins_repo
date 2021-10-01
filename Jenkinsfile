@@ -11,10 +11,7 @@ pipeline {
       
       steps {
           script {
-            echo "This is sample"
-             def file = readFile location
-             def lines = file.readLines()
-             echo "${lines}"
+            sh while read line; do   echo "${line}"; done < repo_list.txt
         }
     }
 
